@@ -152,3 +152,12 @@ body {
         width: 0;
     }
 }
+
+.slideshow img {
+    width: 100%;
+    height: auto;           /* keeps full image visible */
+    max-height: 500px;      /* prevents overly tall images */
+    object-fit: contain;    /* ensures full image shows */
+    border-radius: 10px;
+    background: #000;       /* fills empty space nicely */
+}
