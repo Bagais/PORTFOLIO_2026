@@ -30,10 +30,12 @@
 
     <!-- 🔴 LEFT (IMAGE) -->
     <section class="profile">
-        <img src="images/dp.jpg" alt="Profile Image">
+        <img src="images/dp.jpg" class="fade-up" alt="Profile Image">
         <div class="profile-text">
             <h1>Elisha Bagaiya</h1>
-            <p>Architect | Ilustrator | Creative Thinker</p>
+            <p class="fade-up fade-delay-1">
+            Architect | Ilustrator | Creative Thinker
+        </p>
         </div>
     </section>
 
@@ -42,8 +44,8 @@
 
         <!-- 🟢 INTRO -->
         <section class="intro">
-            <h2>Hello,</h2>
-            <p>
+            <h2 class="fade-up">Hello,</h2>
+            <p class="fade-up fade-delay-1">
                Designing spaces, capturing ideas, and telling stories through form and color.
                I am passionate about architecture, driven by innovation, and inspired by the world around me. From sketching concepts to painting expressions and exploring new places, my work reflects a journey of creativity without limits.
             </p>
@@ -200,6 +202,23 @@ setInterval(() => {
   document.getElementById("slide").src = images[i];
 }, 3000);
 </script>
+
+            <!-- PAGE ANIMATION -->
+
+<script id="scroll-anim">
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
+    }
+  });
+});
+
+document.querySelectorAll('.fade-up, .profile img').forEach(el => {
+  observer.observe(el);
+});
+</script>
+
 
 </body>
 </html>

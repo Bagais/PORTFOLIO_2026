@@ -1,3 +1,11 @@
+html {
+    scroll-behavior: smooth;
+}
+
+section {
+    transition: opacity 0.6s ease;
+}
+
 body {
     margin: 0;
     font-family: 'Inter', sans-serif;
