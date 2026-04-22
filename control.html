@@ -177,8 +177,7 @@
   <a href="#">Twitter</a>
 </footer>
 
-<!-- <script>
-    const observer = new
+<script>
 const images = [
   "images/sk-ic.jpeg",
   "images/sk14.jpg",
@@ -203,10 +202,10 @@ setInterval(() => {
   document.getElementById("slide").src = images[i];
 }, 3000);
 </script>
- -->
+
             <!-- PAGE ANIMATION -->
 
-<!-- <script id="scroll-anim">
+<script id="scroll-anim">
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -218,69 +217,6 @@ const observer = new IntersectionObserver((entries) => {
 document.querySelectorAll('.fade-up, .profile img').forEach(el => {
   observer.observe(el);
 });
-</script> -->
-
-<script>
-/* SCROLL REVEAL */
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("show");
-    }
-  });
-});
-
-document.querySelectorAll(".fade-up").forEach(el => observer.observe(el));
-
-/* MAGNET HOVER EFFECT */
-document.querySelectorAll("nav a, .tile").forEach(item => {
-  item.addEventListener("mousemove", e => {
-    const rect = item.getBoundingClientRect();
-    const x = e.clientX - rect.left - rect.width / 2;
-    const y = e.clientY - rect.top - rect.height / 2;
-
-    item.style.transform = `translate(${x * 0.08}px, ${y * 0.08}px) scale(1.03)`;
-  });
-
-  item.addEventListener("mouseleave", () => {
-    item.style.transform = "translate(0,0) scale(1)";
-  });
-});
-
-/* SLIDESHOW FADE */
-const images = [
-  "images/sk-ic.jpeg",
-  "images/sk14.jpg",
-  "images/sk13.jpg",
-  "images/sk15.jpeg",
-  "images/sk12.jpg",
-  "images/sk11.jpg",
-  "images/sk10.jpg",
-  "images/sk9.jpg",
-  "images/sk8.jpg",
-  "images/sk7.jpg",
-  "images/sk6.jpg",
-  "images/sk5.jpg",
-  "images/sk4.jpg",
-  "images/sk3.jpg",
-  "images/sk2.jpg",
-  "images/sk1.jpg"
-];
-
-let i = 0;
-const slide = document.getElementById("slide");
-
-setInterval(() => {
-  slide.classList.remove("active");
-
-  setTimeout(() => {
-    i = (i + 1) % images.length;
-    slide.src = images[i];
-    slide.classList.add("active");
-  }, 500);
-}, 4000);
-
-slide.classList.add("active");
 </script>
 
 
