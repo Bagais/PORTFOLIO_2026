@@ -379,10 +379,10 @@ main {
 /* Specific background bindings */
 .arch { background: url('images/arc-ic.jpg') center/cover no-repeat; }
 .art { background: url('images/art-ic.jpg') center/cover no-repeat; }
-.pr1 { background: url('images/uni_t.jpg') center/cover no-repeat; }
+.pr1 { background: url('images/resident.jpg') center/cover no-repeat; }
 .pr2 { background: url('images/hospital_t.jpg') center/cover no-repeat; }
-.pr3 { background: url('images/porters_t.jpg') center/cover no-repeat; }
-.pr4 { background: url('images/park_t.jpg') center/cover no-repeat; }
+.pr3 { background: url('comy/B222.jpg') center/cover no-repeat; }
+.pr4 { background: url('images/uni_t.jpg') center/cover no-repeat; }
 
 
 /* ==========================================================
