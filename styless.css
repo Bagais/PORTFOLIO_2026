@@ -1,0 +1,710 @@
+/* ==========================================================
+   GLOBAL RESET & THEME BASE
+   ========================================================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #0a0a0a;
+    color: #f5f5f5;
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ==========================================================
+   HEADER & NAVIGATION
+   ========================================================== */
+header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 30px 0 20px 0;
+}
+
+nav ul#horiz {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#paad {
+    padding: 0 24px;
+}
+
+nav a {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+    color: #d4d4d4;
+    text-decoration: none;
+    position: relative;
+    padding-bottom: 6px;
+    transition: color 0.35s ease;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #c084fc;
+    transition: width 0.35s ease;
+}
+
+nav a:hover {
+    color: #ffffff;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* ==========================================================
+   MAIN CONTAINER & TYPOGRAPHY
+   ========================================================== */
+main {
+    flex: 1;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 20px 24px 60px 24px;
+}
+
+.page-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.page-title h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+    background: linear-gradient(135deg, #ffffff 0%, #c084fc 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.page-title p {
+    color: #a3a3a3;
+    font-size: 1.05rem;
+}
+
+/* ==========================================================
+   HOME PAGE (BIO CONTAINER & CAROUSEL)
+   ========================================================== */
+.bio-container {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1fr;
+    gap: 24px;
+    margin-bottom: 40px;
+}
+
+.profile {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    background: #121212;
+    border: 1px solid #000000;
+}
+
+.profile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(80%);
+    transition: filter 0.5s ease, transform 0.5s ease;
+}
+
+.profile:hover img {
+    filter: grayscale(0%);
+    transform: scale(1.02);
+}
+
+.profile-text {
+    position: absolute;
+    bottom: 24px;
+    left: 24px;
+    right: 24px;
+    z-index: 2;
+}
+
+.profile-text h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.profile-text p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.95rem;
+    color: #c084fc;
+}
+
+.middle {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.intro, .experience, .skills {
+    background: rgba(255, 255, 255, 0.02);
+    backdrop-filter: blur(12px);
+    border: 1px solid #000000;
+    border-radius: 20px;
+    padding: 28px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+.intro h2, .experience h3, .skills h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.25rem;
+    letter-spacing: 1px;
+    margin-bottom: 16px;
+    color: #ffffff;
+}
+
+.experience ul {
+    list-style-type: square;
+    padding-left: 20px;
+    color: #a3a3a3;
+}
+
+.experience li {
+    margin-bottom: 8px;
+}
+
+#band {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 1.5px;
+    color: #c084fc;
+    margin: 20px 0 10px 0;
+}
+
+.skill {
+    margin-bottom: 12px;
+}
+
+.skill span {
+    font-size: 0.85rem;
+    display: block;
+    margin-bottom: 4px;
+    color: #d4d4d4;
+}
+
+.progress {
+    width: 100%;
+    height: 8px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress span {
+    display: block;
+    height: 100%;
+    background: linear-gradient(90deg, #c084fc, #7e22ce);
+    border-radius: 10px;
+}
+
+/* 3D Carousel Component */
+.carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    height: 380px;
+    margin: 20px auto 40px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.02);
+    backdrop-filter: blur(12px);
+    border: 1px solid #000000;
+    border-radius: 20px;
+}
+
+.carousel-track {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    perspective: 1000px;
+}
+
+.carousel-card {
+    position: absolute;
+    width: 280px;
+    height: 280px;
+    border-radius: 16px;
+    overflow: hidden;
+    transition: transform 0.6s ease, opacity 0.6s ease, filter 0.6s ease;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+}
+
+.carousel-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-prev {
+    transform: translateX(-220px) scale(0.75) rotateY(15deg);
+    opacity: 0.45;
+    filter: blur(2px) grayscale(40%);
+    z-index: 1;
+}
+
+.card-active {
+    transform: translateX(0) scale(1) rotateY(0deg);
+    opacity: 1;
+    filter: blur(0) grayscale(0%);
+    z-index: 3;
+    border: 1px solid rgba(192, 132, 252, 0.4);
+}
+
+.card-next {
+    transform: translateX(220px) scale(0.75) rotateY(-15deg);
+    opacity: 0.45;
+    filter: blur(2px) grayscale(40%);
+    z-index: 1;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 20px;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+    transition: background 0.3s ease, transform 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-btn:hover {
+    background: #c084fc;
+    color: #000000;
+}
+
+.prev-btn { left: 16px; }
+.next-btn { right: 16px; }
+
+/* ==========================================================
+   PORTFOLIO & ARCHITECTURAL GRID PAGES
+   ========================================================== */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.arch-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.tile {
+    position: relative;
+    height: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid #000000;
+    background-color: #121212;
+    transition: transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.tile::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.8) 100%);
+    transition: opacity 0.4s ease;
+}
+
+.tile span {
+    position: relative;
+    z-index: 2;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    color: #ffffff;
+    transition: transform 0.4s ease, color 0.4s ease;
+}
+
+.tile:hover {
+    transform: translateY(-6px);
+    border-color: rgba(192, 132, 252, 0.4);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+}
+
+.tile:hover span {
+    transform: translateY(-4px);
+    color: #c084fc;
+}
+
+/* Specific background bindings */
+.arch { background: url('images/arc-ic.jpg') center/cover no-repeat; }
+.art { background: url('images/art-ic.jpg') center/cover no-repeat; }
+.pr1 { background: url('images/uni_t.jpg') center/cover no-repeat; }
+.pr2 { background: url('images/hospital_t.jpg') center/cover no-repeat; }
+.pr3 { background: url('images/porters_t.jpg') center/cover no-repeat; }
+.pr4 { background: url('images/park_t.jpg') center/cover no-repeat; }
+
+
+/* ==========================================================
+   JOINERY PAGE
+   ========================================================== */
+.joinery-container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px 24px 60px 24px;
+}
+
+/* ==========================================================
+   SECTION & GRID LAYOUT
+   ========================================================== */
+/* Section container with black border separation */
+.sht_grd {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    width: 100%; max-width: 100%;
+    padding: 24px;
+    margin-bottom: 40px;
+    background: rgba(255, 255, 255, 0.02);
+    backdrop-filter: blur(12px);
+    
+    /* Requested black border section separation */
+    border: 1px solid #000000;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    transition: border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.sht_grd:hover {
+    border-color: rgba(192, 132, 252, 0.2);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7);
+}
+
+/* Individual Image Card */
+.project-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #121212;
+    border-radius: 12px;
+    padding: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    width: 100%;
+    overflow: hidden;
+    transition: transform 0.4s ease, border-color 0.4s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(192, 132, 252, 0.3);
+}
+
+/* Container maintaining full aspect image without cropping */
+.image-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #050505;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Ensures images load full size while remaining responsive */
+.image-wrapper img {
+    max-width: 100%;
+    height: auto;
+    /*max-height: 700px;*/
+    object-fit: contain; /* Prevents clipping and shows full image */
+    display: block;
+    border-radius: 6px;
+    transition: transform 0.5s ease;
+}
+
+.project-card:hover .image-wrapper img {
+    transform: scale(1.02);
+}
+
+/* ==========================================================
+   FULLSCREEN LIGHTBOX MODAL
+   ========================================================== */
+
+/* Cursor indication on clickable images */
+.project-card img {
+    cursor: pointer;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.project-card img:hover {
+    transform: scale(1.02);
+    filter: brightness(1.1);
+}
+
+/* Lightbox Overlay */
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.92);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.lightbox.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Lightbox Image */
+.lightbox-content {
+    max-width: 90vw;
+    max-height: 90vh;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transform: scale(0.95);
+    transition: transform 0.3s ease;
+}
+
+.lightbox.active .lightbox-content {
+    transform: scale(1);
+}
+
+/* Close Button */
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: #f5f5f5;
+    font-size: 40px;
+    font-weight: 300;
+    cursor: pointer;
+    z-index: 10000;
+    line-height: 1;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.lightbox-close:hover {
+    color: #c084fc;
+    transform: scale(1.1);
+}
+
+/* ==========================================================
+   LANDSCAPING PROJECTS PAGE
+   ========================================================== */
+.landscaping-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    padding: 24px;
+    margin-bottom: 40px;
+    background: rgba(255, 255, 255, 0.02);
+    backdrop-filter: blur(12px);
+    border: 1px solid #000000;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.project-preview {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.project-preview h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    color: #c084fc;
+}
+
+.project-details h4 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    color: #ffffff;
+    margin-bottom: 12px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    padding-bottom: 8px;
+}
+
+.meta-info {
+    color: #a3a3a3;
+    font-size: 0.95rem;
+    margin-bottom: 16px;
+    line-height: 1.8;
+}
+
+.meta-info strong {
+    color: #ffffff;
+}
+
+.project-brief {
+    color: #d4d4d4;
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+/* ==========================================================
+   CONTACT PAGE
+   ========================================================== */
+.contact-card {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.02);
+    backdrop-filter: blur(12px);
+    border: 1px solid #000000;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    text-align: center;
+}
+
+.contact-card h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+    margin-bottom: 24px;
+    color: #ffffff;
+}
+
+.contact-item {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 20px;
+}
+
+.contact-item span.label {
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    color: #c084fc;
+    text-transform: uppercase;
+}
+
+.contact-item span.value {
+    font-size: 1.1rem;
+    color: #f5f5f5;
+}
+
+/* ==========================================================
+   FOOTER & ANIMATIONS
+   ========================================================== */
+footer {
+    text-align: center;
+    padding: 30px 20px;
+    background: #050505;
+    border-top: 1px solid #121212;
+    color: #a3a3a3;
+    margin-top: auto;
+}
+
+footer p {
+    margin-bottom: 8px;
+    color: #888888;
+}
+
+footer a {
+    margin: 0 12px;
+    color: #c084fc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #ffffff;
+}
+
+.fade-up {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-up.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsiveness */
+@media (max-width: 900px) {
+    .bio-container, .portfolio-grid, .arch-grid, .landscaping-section {
+        grid-template-columns: 1fr;
+    }
+    .carousel-container {
+        height: 320px;
+    }
+    .carousel-card {
+        width: 220px;
+        height: 220px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .sht_grd {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+        padding: 16px;
+    }
+}
+
+@media (max-width: 600px) {
+    .sht_grd {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        padding: 12px;
+    }
+    
+    .page-title h1 {
+        font-size: 1.8rem;
+    }
+}

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Elisha Bagaiya | Joinery Projects</title>
+	<link rel="stylesheet" href="styless.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="joinery_page">
+
+	<header>
+	  <nav>
+	    <ul id="horiz">
+	      <li id="paad"><a href="home.html">Home</a></li>
+	      <li id="paad"><a href="portfolio.html">Portfolio</a></li>
+	      <li id="paad"><a href="contact.html">Contact</a></li>
+	    </ul>
+	  </nav>
+	</header>
+
+	<main class="joinery-container">
+        <div class="page-title">
+            <h1>Joinery Projects</h1>
+            <p>A detailed showcase of custom woodworking and spatial joinery designs.</p>
+        </div>
+
+        <section class="sht_grd">
+            <div class="project-card">
+                <div class="image-wrapper">
+                    <img src="comy/B1.png" alt="Joinery Design 1" loading="lazy">
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="image-wrapper">
+                    <img src="comy/B11.png" alt="Joinery Image 1" loading="lazy">
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="image-wrapper">
+                    <img src="comy/B2.png" alt="Joinery Design 2" loading="lazy">
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="image-wrapper">
+                    <img src="comy/B22.png" alt="Joinery Design 3" loading="lazy">
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="image-wrapper">
+                    <img src="comy/B222.png" alt="Joinery Image 3" loading="lazy">
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="image-wrapper">
+                    <img src="comy/M1.png" alt="Joinery Design 4" loading="lazy">
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="image-wrapper">
+                    <img src="comy/M111.png" alt="Joinery Image 4" loading="lazy">
+                </div>
+            </div>
+        </section>
+
+	    <section class="sht_grd">
+            <div class="project-card">
+                <div class="image-wrapper">
+                    <img src="images/RattanDome.jpg" alt="Joinery Design 1" loading="lazy">
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="image-wrapper">
+                    <img src="images/3d.jpg" alt="Joinery Design 2" loading="lazy">
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="image-wrapper">
+                    <img src="images/MetalDome.jpg" alt="Joinery Design 3" loading="lazy">
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="image-wrapper">
+                    <img src="images/3dSkel.jpg" alt="Joinery Design 4" loading="lazy">
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="image-wrapper">
+                    <img src="images/D1.jpg" alt="Joinery Design 4" loading="lazy">
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="image-wrapper">
+                    <img src="images/D2.jpg" alt="Joinery Design 4" loading="lazy">
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="image-wrapper">
+                    <img src="images/D3.jpg" alt="Joinery Design 4" loading="lazy">
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="image-wrapper">
+                    <img src="images/D4.jpg" alt="Joinery Design 4" loading="lazy">
+                </div>
+            </div>
+        </section>
+
+	    <section class="sht_grd">
+            <div class="project-card">
+                <div class="image-wrapper">
+                    <img src="comy/B1.png" alt="Joinery Design 1" loading="lazy">
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="image-wrapper">
+                    <img src="comy/B2.png" alt="Joinery Design 2" loading="lazy">
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="image-wrapper">
+                    <img src="comy/B22.png" alt="Joinery Design 3" loading="lazy">
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="image-wrapper">
+                    <img src="comy/M1.png" alt="Joinery Design 4" loading="lazy">
+                </div>
+            </div>
+            <!-- <div id="imageLightbox" class="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-content" id="lightboxImg" alt="Full view">
+    </div> -->
+        </section>
+	</main>
+
+	<footer>
+	  <p>Follow me:</p>
+	  <!-- <a href="#">Instagram</a> -->
+	  <a href="https://www.linkedin.com/in/elisha-bagaiya-062304a6/">LinkedIn</a>
+	  <a href="https://x.com/Bagaiss">Twitter</a>
+	</footer>
+
+    <div id="imageLightbox" class="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-content" id="lightboxImg" alt="Full view">
+    </div>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const lightbox = document.getElementById("imageLightbox");
+        const lightboxImg = document.getElementById("lightboxImg");
+        const closeBtn = document.querySelector(".lightbox-close");
+
+        // Attach click listeners to all project card images
+        document.querySelectorAll(".project-card img").forEach(img => {
+            img.addEventListener("click", () => {
+                lightbox.classList.add("active");
+                lightboxImg.src = img.src;
+                document.body.style.overflow = "hidden"; // Prevent scrolling behind modal
+            });
+        });
+
+        // Close function
+        const closeLightbox = () => {
+            lightbox.classList.remove("active");
+            document.body.style.overflow = "auto";
+        };
+
+        closeBtn.addEventListener("click", closeLightbox);
+
+        // Close when clicking outside the image
+        lightbox.addEventListener("click", (e) => {
+            if (e.target !== lightboxImg) {
+                closeLightbox();
+            }
+        });
+
+        // Close on Escape key
+        document.addEventListener("keydown", (e) => {
+            if (e.key === "Escape" && lightbox.classList.contains("active")) {
+                closeLightbox();
+            }
+        });
+    });
+    </script>
+</body>
+</html>

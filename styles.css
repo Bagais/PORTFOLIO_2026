@@ -304,7 +304,7 @@ footer a {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.45);
+  background: rgba(0,0,0,0.25);
   transition: background 0.4s ease;
 }
 
@@ -356,6 +356,12 @@ footer a {
     transform: translateY(0);
 }
 
+
+#band {
+    border: 1px solid red; border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+}
         /*GLASSMORPHISM PANELS*/
 
 .intro,
@@ -368,4 +374,345 @@ footer a {
     border: 1px solid rgba(255, 255, 255, 0.05);
     border-radius: 24px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+/* ==========================================================
+   3D CAROUSEL COMPONENT
+   ========================================================== */
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    height: 420px;
+    margin: 20px auto 50px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 24px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.carousel-track {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    perspective: 1000px;
+}
+
+.carousel-card {
+    position: absolute;
+    width: 320px;
+    height: 320px;
+    border-radius: 16px;
+    overflow: hidden;
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.6s ease, filter 0.6s ease;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+}
+
+.carousel-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Background Card - Left (Previous Image) */
+.card-prev {
+    transform: translateX(-240px) scale(0.75) rotateY(15deg);
+    opacity: 0.45;
+    filter: blur(2px) grayscale(40%);
+    z-index: 1;
+}
+
+/* Foreground Active Card */
+.card-active {
+    transform: translateX(0) scale(1) rotateY(0deg);
+    opacity: 1;
+    filter: blur(0) grayscale(0%);
+    z-index: 3;
+    border: 1px solid rgba(192, 132, 252, 0.3);
+}
+
+/* Background Card - Right (Next Image) */
+.card-next {
+    transform: translateX(240px) scale(0.75) rotateY(-15deg);
+    opacity: 0.45;
+    filter: blur(2px) grayscale(40%);
+    z-index: 1;
+}
+
+/* Carousel Buttons */
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 22px;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+    transition: background 0.3s ease, transform 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-btn:hover {
+    background: #c084fc;
+    color: #000;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.prev-btn {
+    left: 15px;
+}
+
+.next-btn {
+    right: 15px;
+}
+
+@media (max-width: 768px) {
+    .carousel-container {
+        height: 320px;
+    }
+    .carousel-card {
+        width: 220px;
+        height: 220px;
+    }
+    .card-prev {
+        transform: translateX(-130px) scale(0.75);
+    }
+    .card-next {
+        transform: translateX(130px) scale(0.75);
+    }
+}
+
+
+
+/* ==========================================================
+   PAGE-SPECIFIC OVERRIDES: ARCHITECTURAL PROJECTS PAGE
+   ========================================================== */
+
+.pr1 {
+    width: 100%; max-width: 300px;
+    aspect-ratio: 1/1;
+    background: url(images/resident.jpg) center/cover no-repeat;
+}
+
+.pr2 {
+    width: 100%; max-width: 300px;
+    aspect-ratio: 1/1;
+    background: url(images/hospital_t.jpg) center/cover no-repeat;
+}
+
+.pr3 {
+    width: 100%; max-width: 300px;
+    aspect-ratio: 1/1;
+    background: url(comy/B222.jpg) center/cover no-repeat;
+}
+
+.pr4 {
+    width: 100%; max-width: 300px;
+    aspect-ratio: 1/1;
+    background: url(images/uni_t.jpg) center/cover no-repeat;
+}
+
+.j1 {
+    width: 100%; max-width: 300px;
+    aspect-ratio: 1/1;
+    background: url(comy/B1.png) center/cover no-repeat;
+}
+
+.j2 {
+    width: 100%; max-width: 300px;
+    aspect-ratio: 1/1;
+    background: url(comy/B2.png) center/cover no-repeat;
+}
+
+.j3 {
+    width: 100%; max-width: 300px;
+    aspect-ratio: 1/1;
+    background: url(comy/B22.png) center/cover no-repeat;
+}
+
+.j4 {
+    width: 100%; max-width: 300px;
+    aspect-ratio: 1/1;
+    background: url(comy/M1.png) center/cover no-repeat;
+}
+
+
+/* 1. Center the overall page layout */
+body.arc_land {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* 2. Center the Navigation Bar */
+body.arc_land header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+body.arc_land #horiz {
+    display: flex;
+    justify-content: center;
+    padding-left: 0;
+}
+
+/* 3. Center and constrain the Main Content area */
+body.arc_land main {
+    width: 100%;
+    max-width: 1100px; /* Adjust width as needed */
+    margin: 0 auto;
+    padding: 0 20px;
+    flex: 1; /* Pushes the footer cleanly to the bottom */
+}
+
+/* 4. Center Grid Card items */
+body.arc_land .bio-container {
+    align-items: center;
+}
+
+/* 5. Center the Footer across full screen width */
+body.arc_land footer {
+    width: 100%;
+}
+
+/* ==============
+   GRID OVERRIDES
+   ============== */
+
+/* 1. Set container to a 3-Column Desktop Grid */
+body.arc_land .bio-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Creates the 3-column layout */
+    gap: 30px;
+    width: 100%;
+    padding: 40px 20px;
+}
+
+/* 2. Format individual project cards */
+body.arc_land .bio-container > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: #f5f5f5;
+}
+
+/* 3. Ensure tiles scale properly within grid cells */
+body.arc_land .tile {
+    width: 100%;
+    max-width: 100%; /* Overrides previous 300px limit to fill grid width */
+    height: auto;
+    aspect-ratio: 1 / 1;
+}
+
+/* ==========================================================
+   RESPONSIVE BREAKPOINTS
+   ========================================================== */
+
+/* Tablet (2 columns) */
+@media (max-width: 900px) {
+    body.arc_land .bio-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+/* Mobile (1 column) */
+@media (max-width: 550px) {
+    body.arc_land .bio-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
+/* ==========================================================
+   LANDSCAPING RENDERS
+   ========================================================== */
+
+.sk {
+    width: 1000px; height: 500px;
+    border: 15px solid black;
+    display: inline-grid;
+}
+
+#one {
+    background-image: url(images/SP1.jpg); background-size: 100% 100%; background-repeat: no-repeat;
+}
+#two {
+    background-image: url(images/PT1.jpg); background-size: 100% 100%; background-repeat: no-repeat;
+}
+#three {
+    background-image: url(images/HL1.jpg); background-size: 100% 100%; background-repeat: no-repeat;
+}
+#four {
+    background-image: url(images/sk4.jpg); background-size: 100% 100%; background-repeat: no-repeat;
+}
+#five {
+    background-image: url(images/sk5.jpg); background-size: 100% 100%; background-repeat: no-repeat;
+}
+#six {
+    background-image: url(images/sk6.jpg); background-size: 100% 100%; background-repeat: no-repeat;
+}
+#seven {
+    background-image: url(images/sk7.jpg); background-size: 100% 100%; background-repeat: no-repeat;
+}
+#eight {
+    background-image: url(images/sk8.jpg); background-size: 100% 100%; background-repeat: no-repeat;
+}
+#nine {
+    background-image: url(images/sk9.jpg); background-size: 100% 100%; background-repeat: no-repeat;
+}
+#ten {
+    background-image: url(images/sk10.jpg); background-size: 100% 100%; background-repeat: no-repeat;
+}
+#eleven {
+    background-image: url(images/sk11.jpg); background-size: 100% 100%; background-repeat: no-repeat;
+}
+#twelve {
+    background-image: url(images/sk12.jpg); background-size: 100% 100%; background-repeat: no-repeat;
+}
+#thirteen {
+    background-image: url(images/sk13.jpg); background-size: 100% 100%; background-repeat: no-repeat;
+}
+#fourteen {
+    background-image: url(images/sk14.jpg); background-size: 100% 100%; background-repeat: no-repeat;
+}
+#fifteen {
+    background-image: url(images/sk15.jpeg); background-size: 100% 100%; background-repeat: no-repeat;
+}
+
+
+.sheet {
+  position: relative;
+  height: 100%; width:100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sht_grd {
+    display: flex;
 }

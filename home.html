@@ -3,12 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Bio</title>
+    <title>Elisha Bagaiya | Home</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
-<!-- Favicon -->
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
@@ -16,273 +15,172 @@
 </head>
 
 <body>
-<header>
-  <nav>
-    <ul id="horiz">
-      <li id="paad"><a href="home.html">Home</a></li>
-      <li id="paad"><a href="portfolio.html">Portfolio</a></li>
-      <li id="paad"><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
-</header>
+    <header>
+      <nav>
+        <ul id="horiz">
+          <li id="paad"><a href="home.html">Home</a></li>
+          <li id="paad"><a href="portfolio.html">Portfolio</a></li>
+          <li id="paad"><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
 
-<section class="bio-container">
+    <main>
+        <section class="bio-container">
+                <div class="profile">
+                    <img src="images/dp.jpg" class="fade-up" alt="Elisha Bagaiya Profile">
+                    <div class="profile-text">
+                        <h1>Elisha Bagaiya</h1>
+                        <p>Architect | Illustrator | Creative Thinker</p>
+                    </div>
+                </div>
 
-    <!-- 🔴 LEFT (IMAGE) -->
-    <section class="profile">
-        <img src="images/dp.jpg" class="fade-up" alt="Profile Image">
-        <div class="profile-text">
-            <h1>Elisha Bagaiya</h1>
-            <p class="fade-up fade-delay-1">
-            Architect | Ilustrator | Creative Thinker
-        </p>
-        </div>
-    </section>
+                <div class="middle">
+                    <section class="intro fade-up">
+                        <h2>HELLO,</h2>
+                        <p>
+                           Designing spaces, capturing ideas, and telling stories through form and color. I am passionate about architecture, driven by innovation, and inspired by the world around me.
+                        </p>
+                    </section>
 
-    <!-- 🟢 + 🔵 + 🟡 MIDDLE -->
-    <div class="middle">
+                    <div class="experience fade-up">
+                        <h3>EXPERIENCE</h3>
+                        <ul>
+                            <li>Architectural Design & Project Management</li>
+                            <li>Freelance Illustration & Sketching</li>
+                            <li>Web Design Projects</li>
+                        </ul>
+                    </div>
+                </div>
 
-        <!-- 🟢 INTRO -->
-        <section class="intro">
-            <h2 class="fade-up">Hello,</h2>
-            <p class="fade-up fade-delay-1">
-               Designing spaces, capturing ideas, and telling stories through form and color.
-               I am passionate about architecture, driven by innovation, and inspired by the world around me. From sketching concepts to painting expressions and exploring new places, my work reflects a journey of creativity without limits.
-            </p>
-        </section>
+                <div class="skills fade-up">
+                    <h3>PROFICIENCIES</h3>
 
-        <!-- 🔵 + 🟡 ROW -->
-        <div class="bottom-row">
+                    <div id="band">- ARCHITECTURE -</div>
+                    <div class="skill">
+                        <span>AutoCAD</span>
+                        <div class="progress"><span style="width: 95%"></span></div>
+                    </div>
+                    <div class="skill">
+                        <span>SketchUp</span>
+                        <div class="progress"><span style="width: 90%"></span></div>
+                    </div>
+                    <div class="skill">
+                        <span>Revit Architecture</span>
+                        <div class="progress"><span style="width: 75%"></span></div>
+                    </div>
 
-            <!-- 🔵 EXPERIENCE -->
-            <div class="experience">
-                <h3>Experience</h3>
-                <ul>
-                    <li>Architectural Design Projects</li>
-                    <li>Freelance Illustration & Sketching</li>
-                    <li>Web Design Projects</li>
-                </ul>
+                    <div id="band">- ART -</div>
+                    <div class="skill">
+                        <span>Freehand Sketching</span>
+                        <div class="progress"><span style="width: 99%"></span></div>
+                    </div>
+                    <div class="skill">
+                        <span>Painting</span>
+                        <div class="progress"><span style="width: 95%"></span></div>
+                    </div>
+                    <div class="skill">
+                        <span>Illustration</span>
+                        <div class="progress"><span style="width: 92%"></span></div>
+                    </div>
+
+                    <div id="band">- DEVELOPMENT -</div>
+                    <div class="skill">
+                        <span>Python</span>
+                        <div class="progress"><span style="width: 45%"></span></div>
+                    </div>
+                    <div class="skill">
+                        <span>JavaScript</span>
+                        <div class="progress"><span style="width: 20%"></span></div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="page-title">
+                <h2 style="font-family: 'Poppins', sans-serif; font-size: 1.5rem; letter-spacing: 1px;">FEATURED SKETCHES</h2>
             </div>
+            
+            <section class="carousel-container">
+              <button class="carousel-btn prev-btn" id="prevBtn">&#10094;</button>
+              <div class="carousel-track">
+                <div class="carousel-card card-prev">
+                  <img id="imgPrev" src="" alt="Previous Sketch">
+                </div>
+                <div class="carousel-card card-active">
+                  <img id="imgActive" src="" alt="Featured Sketch">
+                </div>
+                <div class="carousel-card card-next">
+                  <img id="imgNext" src="" alt="Next Sketch">
+                </div>
+              </div>
+              <button class="carousel-btn next-btn" id="nextBtn">&#10095;</button>
+            </section>
+        </main>
 
-            <!-- 🟡 INTERESTS -->
-            <div class="interests">
-                <h3>Interests</h3>
-                <img src="images/art.jpg" alt="Creative interests">
-            </div>
+    <footer>
+      <p>Follow me:</p>
+      <a href="https://www.linkedin.com/in/elisha-bagaiya-062304a6/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://x.com/Bagaiss" target="_blank" rel="noopener">Twitter</a>
+    </footer>
 
-        </div>
+    <script>
+    /* Intersection Observer for animations */
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+        }
+      });
+    });
+    document.querySelectorAll(".fade-up").forEach(el => observer.observe(el));
 
-    </div>
+    /* Carousel Controller */
+    const galleryImages = [
+      "images/sk-ic.jpeg", "images/sk14.jpg", "images/sk13.jpg",
+      "images/sk15.jpeg", "images/sk12.jpg", "images/sk11.jpg",
+      "images/sk10.jpg",  "images/sk9.jpg",  "images/sk8.jpg"
+    ];
 
-    <!-- 🟤 RIGHT (SKILLS) -->
-    <!-- <div class="skills">
-        <h3>Proficiency</h3>
+    let currentIndex = 0;
+    const imgPrev = document.getElementById("imgPrev");
+    const imgActive = document.getElementById("imgActive");
+    const imgNext = document.getElementById("imgNext");
 
-        <div class="skill-group">
-            <h4>Architecture</h4>
-            <p>Revit, AutoCAD, SketchUp, CorelDraw</p>
-        </div>
+    function updateCarousel() {
+      const total = galleryImages.length;
+      const prevIndex = (currentIndex - 1 + total) % total;
+      const nextIndex = (currentIndex + 1) % total;
 
-        <div class="skill-group">
-            <h4>Art & Graphics</h4>
-            <p>Sketching, Painting, Illustration, Digital Art</p>
-        </div>
-
-        <div class="skill-group">
-            <h4>Web Design</h4>
-            <p>HTML, CSS, JavaScript, Python</p>
-        </div>
-    </div> -->
-
-
-<div class="skills">
-    <h3>Proficiencies</h3>
-
-    <!-- Architecture -->
-    <div class="skill">
-        <span>Revit</span>
-        <div class="progress"><span style="width: 90%"></span></div>
-    </div>
-
-    <div class="skill">
-        <span>AutoCAD</span>
-        <div class="progress"><span style="width: 85%"></span></div>
-    </div>
-
-    <div class="skill">
-        <span>SketchUp</span>
-        <div class="progress"><span style="width: 80%"></span></div>
-    </div>
-
-    <!-- <div class="skill">
-        <span>CorelDraw</span>
-        <div class="progress"><span style="width: 75%"></span></div>
-    </div> -->
-
-    <!-- Art -->
-    <div class="skill">
-        <span>Sketching</span>
-        <div class="progress"><span style="width: 90%"></span></div>
-    </div>
-
-    <div class="skill">
-        <span>Painting</span>
-        <div class="progress"><span style="width: 85%"></span></div>
-    </div>
-
-    <div class="skill">
-        <span>Illustration</span>
-        <div class="progress"><span style="width: 88%"></span></div>
-    </div>
-
-    <div class="skill">
-        <span>Digital Art</span>
-        <div class="progress"><span style="width: 80%"></span></div>
-    </div>
-
-    <!-- Web -->
-    <!-- <div class="skill">
-        <span>HTML</span>
-        <div class="progress"><span style="width: 85%"></span></div>
-    </div>
-
-    <div class="skill">
-        <span>CSS</span>
-        <div class="progress"><span style="width: 80%"></span></div>
-    </div> -->
-
-    <div class="skill">
-        <span>JavaScript</span>
-        <div class="progress"><span style="width: 70%"></span></div>
-    </div>
-
-    <div class="skill">
-        <span>Python</span>
-        <div class="progress"><span style="width: 65%"></span></div>
-    </div>
-</div>
-</section>
-
-<!-- Slideshow -->
-  <section class="slideshow">
-    <img id="slide" src="images/sk-ic.jpeg">
-  </section>
-
-</main>
-
-<footer>
-  <p>Follow me:</p>
-  <a href="#">Instagram</a>
-  <a href="#">LinkedIn</a>
-  <a href="#">Twitter</a>
-</footer>
-
-<!-- <script>
-    const observer = new
-const images = [
-  "images/sk-ic.jpeg",
-  "images/sk14.jpg",
-  "images/sk13.jpg",
-  "images/sk15.jpeg",
-  "images/sk12.jpg",
-  "images/sk11.jpg",
-  "images/sk10.jpg",
-  "images/sk9.jpg",
-  "images/sk8.jpg",
-  "images/sk7.jpg",
-  "images/sk6.jpg",
-  "images/sk5.jpg",
-  "images/sk4.jpg",
-  "images/sk3.jpg",
-  "images/sk2.jpg",
-  "images/sk1.jpg",
-];
-let i = 0;
-setInterval(() => {
-  i = (i + 1) % images.length;
-  document.getElementById("slide").src = images[i];
-}, 3000);
-</script>
- -->
-            <!-- PAGE ANIMATION -->
-
-<!-- <script id="scroll-anim">
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('show');
+      imgPrev.src = galleryImages[prevIndex];
+      imgActive.src = galleryImages[currentIndex];
+      imgNext.src = galleryImages[nextIndex];
     }
-  });
-});
 
-document.querySelectorAll('.fade-up, .profile img').forEach(el => {
-  observer.observe(el);
-});
-</script> -->
+    document.getElementById("prevBtn").addEventListener("click", () => {
+      currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
+      updateCarousel();
+    });
 
-<script>
-/* SCROLL REVEAL */
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("show");
-    }
-  });
-});
+    document.getElementById("nextBtn").addEventListener("click", () => {
+      currentIndex = (currentIndex + 1) % galleryImages.length;
+      updateCarousel();
+    });
 
-document.querySelectorAll(".fade-up").forEach(el => observer.observe(el));
+    let autoSlide = setInterval(() => {
+      currentIndex = (currentIndex + 1) % galleryImages.length;
+      updateCarousel();
+    }, 4000);
 
-/* MAGNET HOVER EFFECT */
-document.querySelectorAll("nav a, .tile").forEach(item => {
-  item.addEventListener("mousemove", e => {
-    const rect = item.getBoundingClientRect();
-    const x = e.clientX - rect.left - rect.width / 2;
-    const y = e.clientY - rect.top - rect.height / 2;
+    const container = document.querySelector(".carousel-container");
+    container.addEventListener("mouseenter", () => clearInterval(autoSlide));
+    container.addEventListener("mouseleave", () => {
+      autoSlide = setInterval(() => {
+        currentIndex = (currentIndex + 1) % galleryImages.length;
+        updateCarousel();
+      }, 4000);
+    });
 
-    item.style.transform = `translate(${x * 0.08}px, ${y * 0.08}px) scale(1.03)`;
-  });
-
-  item.addEventListener("mouseleave", () => {
-    item.style.transform = "translate(0,0) scale(1)";
-  });
-});
-
-/* SLIDESHOW FADE */
-const images = [
-  "images/sk-ic.jpeg",
-  "images/sk14.jpg",
-  "images/sk13.jpg",
-  "images/sk15.jpeg",
-  "images/sk12.jpg",
-  "images/sk11.jpg",
-  "images/sk10.jpg",
-  "images/sk9.jpg",
-  "images/sk8.jpg",
-  "images/sk7.jpg",
-  "images/sk6.jpg",
-  "images/sk5.jpg",
-  "images/sk4.jpg",
-  "images/sk3.jpg",
-  "images/sk2.jpg",
-  "images/sk1.jpg"
-];
-
-let i = 0;
-const slide = document.getElementById("slide");
-
-setInterval(() => {
-  slide.classList.remove("active");
-
-  setTimeout(() => {
-    i = (i + 1) % images.length;
-    slide.src = images[i];
-    slide.classList.add("active");
-  }, 500);
-}, 4000);
-
-slide.classList.add("active");
-</script>
-
-
+    updateCarousel();
+    </script>
 </body>
 </html>
